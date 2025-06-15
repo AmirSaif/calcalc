@@ -24,7 +24,7 @@ export default function BMRForm() {
   const [result, setResult] = useState<number | null>(null);
   const [isFlipped, setIsFlipped] = useState(false);
   const [flipped, setFlipped] = useState(false);
-  const [flipDirection, setFlipDirection] = useState<'horizontal' | 'vertical'>('horizontal');
+  const [_, setFlipDirection] = useState<'horizontal' | 'vertical'>('horizontal');
 
   const clearForm = () => {
     setFlipDirection('vertical');
