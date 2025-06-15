@@ -123,21 +123,19 @@ export default function BMRForm() {
                 <div className="flex gap-3">
                   <button
                     onClick={() => setUnitSystem('metric')}
-                    className={`px-4 py-2 rounded-md ${
-                      unitSystem === 'metric'
+                    className={`px-4 py-2 rounded-md ${unitSystem === 'metric'
                         ? 'bg-purple-500 text-white'
                         : 'bg-white/30 text-white'
-                    }`}
+                      }`}
                   >
                     Metric (kg/cm)
                   </button>
                   <button
                     onClick={() => setUnitSystem('imperial')}
-                    className={`px-4 py-2 rounded-md ${
-                      unitSystem === 'imperial'
+                    className={`px-4 py-2 rounded-md ${unitSystem === 'imperial'
                         ? 'bg-purple-500 text-white'
                         : 'bg-white/30 text-white'
-                    }`}
+                      }`}
                   >
                     Imperial (lb/in)
                   </button>
@@ -169,10 +167,10 @@ export default function BMRForm() {
 
               {/* Activity */}
               <div className="mb-6 relative z-10">
-                <label className="block mb-2 font-medium opacity-70 text-white">Activity Level</label>
+                <label className="block mb-2 font-medium opacity-70">Activity Level</label>
                 <Select.Root value={selectedActivity} onValueChange={setSelectedActivity}>
                   <Select.Trigger
-                    className="w-full inline-flex items-center justify-between rounded-md bg-purple-100/30 px-4 py-2 font-medium shadow-md focus:outline-none focus:ring-2 focus:ring-purple-500 backdrop-blur-md opacity-70 text-white"
+                    className="w-full inline-flex items-center justify-between rounded-md bg-purple-100/30 px-4 py-2 font-medium shadow-md focus:outline-none focus:ring-2 focus:ring-purple-500 backdrop-blur-md opacity-70"
                     aria-label="Activity level"
                   >
                     <Select.Value placeholder="Select activity level" />
@@ -220,7 +218,7 @@ export default function BMRForm() {
                 </button>
 
                 <button
-                  className="text-sm opacity-70 underline text-white"
+                  className="text-sm opacity-70 underline"
                   onClick={clearForm}
                 >
                   Reset
@@ -237,7 +235,7 @@ export default function BMRForm() {
               transform: 'rotateY(180deg)',
             }}
           >
-            <div className="backdrop-blur-md bg-white/20 border border-white/30 shadow-xl rounded-2xl p-8 text-white w-full">
+            <div className="backdrop-blur-md bg-white/20 border border-white/30 shadow-xl rounded-2xl p-8 w-full">
               <h3 className="text-xl font-bold mb-4">Estimated Daily Calories</h3>
               <p className="text-4xl font-semibold mb-6">{result} kcal</p>
               <button
